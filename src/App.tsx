@@ -1,9 +1,10 @@
 import "./App.css";
-import styled from "styled-components";
 import { Header } from "./layout/header/Header";
 import { Main } from "./layout/sections/main/Main";
 import { Skills } from "./layout/sections/skills/Skills";
 import { Projects } from "./layout/sections/projects/Projects";
+import { Footer } from "./layout/footer/Footer";
+import { AboutMe } from "./layout/sections/aboutMe/AboutMe";
 
 function App() {
 	return (
@@ -12,14 +13,10 @@ function App() {
 			<Main />
 			<Skills />
 			<Projects />
+			<AboutMe />
+			<Footer />
 		</div>
 	);
 }
 
 export default App;
-
-const Title = styled.h1`
-	font-size: 1.5em;
-	text-align: center;
-	color: #e91e63;
-`;
