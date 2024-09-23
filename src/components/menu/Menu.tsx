@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "../link/Link";
 
 type MenuType = {
 	menuItems: Array<string>;
@@ -7,19 +8,24 @@ type MenuType = {
 export function Menu(props: MenuType) {
 	return (
 		<StyledMenu>
-			<ul>
+			<UnodoredListitem>
 				{props.menuItems.map((el) => (
-					<li><a href=''>{el}</a></li>
+					<ListItem>
+						<Link href="">{el}</Link>
+					</ListItem>
 				))}
-			</ul>
+			</UnodoredListitem>
 		</StyledMenu>
 	);
 }
 
 const StyledMenu = styled.nav`
-ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
+	display: flex;
 `;
+const UnodoredListitem = styled.ul`
+	display: flex;
+	gap: 32px;
+	justify-content: center;
+`;
+
+const ListItem = styled.li``;

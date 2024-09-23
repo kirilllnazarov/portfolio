@@ -10,4 +10,7 @@ export function Logo() {
 }
 
 const StyledLogo = styled.a`
+display: flex;
+justify-content: center;
+align-items: center;
 `;

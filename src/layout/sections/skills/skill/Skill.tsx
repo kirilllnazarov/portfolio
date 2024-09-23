@@ -10,28 +10,51 @@ type SkillType = {
 export function Skill(props: SkillType) {
 	return (
 		<StyledSkill>
-			<div>
+			<IconWrapper>
 				<Icon iconId={props.iconId} viewBox={"0 0 120 120"} />
-			</div>
-			<div>
-				{" "}
+			</IconWrapper>
+			<TewtWrapper>
 				<SkillTitle>{props.title}</SkillTitle>
 				<SkillText>{props.description}</SkillText>
-			</div>
+			</TewtWrapper>
 		</StyledSkill>
 	);
 }
 
 const StyledSkill = styled.div`
-	width: 30%;
-	background-color: #ffffff;
-	margin: 10px;
+	width: 440px;
+	height: 146px;
+	/* outline: 1px solid red; */
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	gap: 30px;
+	
 `;
 
-const SkillTitle = styled.h2``;
+const SkillTitle = styled.h2`
+	width: 325px;
+	height: 30px;
+	font-size: 30px;
+	font-weight: 300;
+`;
 
-const SkillText = styled.p``;
+const SkillText = styled.div`
+	width: 325px;
+	height: 110px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 200;
+	line-height: 123%;
+`;
+
+const IconWrapper = styled.div`
+	width: 325px;
+	height: 145px;
+	padding-top: 17px;
+`;
+
+const TewtWrapper = styled.div`
+	width: 325px;
+	height: 145px;
+
+`;

@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/flexWrapper/FlexWrapper";
 import { Skill } from "./skill/Skill";
+import { theme } from "../../../styles/Theme";
 
 export function Skills() {
 	return (
-		<StyledSkills>
-			<FlexWrapper wrap={"wrap"} justify="space-between">
+		<ContainerSkill>
+			<StyledSkills>
 				<Skill
 					iconId={"react"}
 					title={"React"}
@@ -48,12 +49,25 @@ export function Skills() {
 						"consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue"
 					}
 				/>
-			</FlexWrapper>
-		</StyledSkills>
+			</StyledSkills>
+		</ContainerSkill>
 	);
 }
 
 const StyledSkills = styled.section`
-	background-color: #2f75d7;
-	min-height: 50vh;
+	background-color: ${theme.color.priamoryBg};
+	color: ${theme.color.secondaryBg};
+	width: 1336px;
+	height: 351px;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-around;
 `;
+
+const ContainerSkill = styled.div`
+	width: 1440px;
+	height: 600px;
+	background-color: ${theme.color.priamoryBg};
+	padding: 102px 52px 144px;
+`
