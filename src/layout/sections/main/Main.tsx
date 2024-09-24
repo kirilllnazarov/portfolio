@@ -21,6 +21,7 @@ export function Main() {
 
 const StyledMain = styled.div`
 	height: 864px;
+	max-width: 100vh;
 	background-color: ${theme.color.secondaryBg};
 `;
 
@@ -65,3 +66,4 @@ const Photo = styled.img`
 	object-fit: cover;
 	transform: rotate(8deg);
 `;
+
